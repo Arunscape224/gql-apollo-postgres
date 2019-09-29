@@ -7,7 +7,7 @@ import models from './models'
 const resolvers = mergeResolvers(fileLoader(path.join(__dirname, './resolvers')));
 const typeDefs = mergeTypes(fileLoader(path.join(__dirname, './schema')), { all: true });
 
-const server = new ApolloServer({ typeDefs, resolvers, context: { models } });
+const server = new ApolloServer({ typeDefs, resolvers, context: { models, user: { id: 1 } } });
 
 const app = express();
 server.applyMiddleware({ app });
