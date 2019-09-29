@@ -9,6 +9,7 @@ const sequelize = new Sequelize('audionekt', 'postgres', 'postgres', {
 const models = {
     User: sequelize.import('./user'),
     Channel: sequelize.import('./channel'),
+    Band: sequelize.import('./band'),
     Message: sequelize.import('./message'),
 };
 

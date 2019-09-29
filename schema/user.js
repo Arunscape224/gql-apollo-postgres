@@ -5,7 +5,8 @@ export default gql`
     id: Int!
     username: String!
     email: String!
-    channels: [Channel!]!
+    instrument: String!
+    bands: [Band!]!
   }
 
   type Query {
@@ -14,7 +15,6 @@ export default gql`
   }
 
   type Mutation {
-    createUser(username: String!, email: String!, password: String!): User!
+    createUser(username: String!, email: String!, instrument: String!, password: String!): User!
   }
-
   `
