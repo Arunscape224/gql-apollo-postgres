@@ -15,6 +15,6 @@ export default gql`
   }
 
   type Mutation {
-    createUser(username: String!, email: String!, instrument: String!, password: String!): User!
+    register(username: String!, email: String!, instrument: String!, password: String!): Boolean!
   }
   `
