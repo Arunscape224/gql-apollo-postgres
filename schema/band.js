@@ -7,7 +7,13 @@ export default gql`
      channels: [Channel!]!
  }
 
+ type CreateBandResponse {
+    ok: Boolean!
+    errors: [Error!]
+  }
+
+
  type Mutation {
-     createBand(name: String!): Boolean!
+     createBand(name: String!): CreateBandResponse!
  }
 `
